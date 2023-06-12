@@ -1,0 +1,40 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Stack Website</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='Feathers.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="w3-animate-zoom">
+      <div class="w3-bar w3-blue-gray">
+        <a href="/other1" class="w3-bar-item w3-button w3-hover-shadow"
+          >Link 1</a
+        >
+        <a href="/other2" class="w3-bar-item w3-button w3-hover-shadow"
+          >Link 2</a
+        >
+        <a href="/other3" class="w3-bar-item w3-button w3-hover-shadow"
+          >Link 3</a
+        >
+        <a href="/bill" class="w3-bar-item w3-button w3-hover-shadow">Home</a>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+    <footer>
+      <div
+        class="w3-card w3-hover-shadow w3-light-blue w3-center w3-animate-zoom"
+      >
+        <p><b>Copyright</b> © <i>BudgieCode</i></p>
+      </div>
+    </footer>
+  </body>
+</html>

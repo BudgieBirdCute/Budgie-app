@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(229, 238, 238);
+  font-family: monospace;
+  
+}
+
+p {
+  font-size: 19px;
+  color: rgb(10, 10, 10);
+  font-family: monospace;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: monospace;
+}
+
+ div.w3-panel{
+  width: 25%;
+  float: left;
+}
+
+footer div {
+  width: 100%;
+  bottom:0px;
+  float: left;
+}
+
+table {
+  float: left;
+  width: 50%;
+}

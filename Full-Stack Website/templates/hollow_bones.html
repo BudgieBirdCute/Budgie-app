@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% extends "main_bones.html" %} {% block content%}
+<html lang="en">
+  <head> </head>
+  <body class="w3-animate-top">
+    <div class="w3-container">
+      <h2>Welcome To the Home page of the Budgie web app</h2>
+
+      <p>Hope you Enjoy, {{ name }}.</p>
+
+      <div
+        class="w3-panel w3-card w3-hover-shadow w3-pale-blue w3-animate-zoom"
+      >
+        <div class="w3-container w3-center">
+          <h1>Budgie</h1>
+          <img
+            src="https://t3.ftcdn.net/jpg/00/31/53/60/360_F_31536029_mx0Iemg76N1YJSTvLtgBGsz3SR7ECUeo.jpg"
+            alt="Alps"
+            style="width: 90%"
+            onclick="document.getElementById('budgie101').style.display='block'"
+          />
+          <div
+            id="budgie101"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <img
+                src="https://t3.ftcdn.net/jpg/00/31/53/60/360_F_31536029_mx0Iemg76N1YJSTvLtgBGsz3SR7ECUeo.jpg"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+          <br />
+          <br />
+          <button
+            onclick="myFunction('Demo1')"
+            class="w3-btn w3-block w3-light-blue w3-left-align"
+          >
+            Why Budgies?
+          </button>
+          <div id="Demo1" class="w3-container w3-hide">
+            <p>Why not?</p>
+          </div>
+        </div>
+      </div>
+
+      <table class="w3-table-all w3-centered w3-hover-shadow w3-animate-zoom">
+        <tr class="w3-hover-blue w3-animate-zoom">
+          <th>Reason #</th>
+          <th>Why</th>
+          <th>How</th>
+        </tr>
+        <tr class="w3-hover-light-blue w3-animate-zoom">
+          <th>1#</th>
+          <th>They're cute</th>
+          <th>Common Sense, Look at that Budgie up there.. Its cute.</th>
+        </tr>
+        <tr class="w3-hover-blue w3-animate-zoom">
+          <th>2#</th>
+          <th>They're funny</th>
+          <th>
+            The way they walk, or go up to your shoulder, It's just so funny.
+          </th>
+        </tr>
+        <tr class="w3-hover-light-blue w3-animate-zoom">
+          <th>3#</th>
+          <th>They're birds!!</th>
+          <th>Birds, thats always a <b>ginourmous</b> plus.</th>
+        </tr>
+        <tr class="w3-hover-blue w3-animate-zoom">
+          <th>4#</th>
+          <th>They're just built different!!</th>
+          <th>They're just good, get over it.</th>
+        </tr>
+      </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='Flying.js') }}"></script>
+
+    {% endblock content %}
+  </body>
+</html>
